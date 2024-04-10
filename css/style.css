@@ -2046,6 +2046,16 @@ h3 {
   border-bottom: grey solid 1px;
 }
 
+.categories .row .card .price{
+  color: #872fdf;
+}
+
+.categories .row .card .price .original-price{
+  color: black;
+  font-size: 15px;
+  text-decoration: line-through red;
+}
+
 .categories .row .card a{
   border-radius: 5px;
   padding: 10px;
