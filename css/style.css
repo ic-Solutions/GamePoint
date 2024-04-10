@@ -2101,7 +2101,17 @@ h3 {
 }
 
 .contact .chairs img{
+  border-radius: 50%;
+  border: 5px cornflowerblue solid;
   width: 100%;
+}
+
+.contact .chairs p{
+  font-size: 15px;
+}
+
+.contact .chairs p a{
+  color: #49c556;
 }
 
 
