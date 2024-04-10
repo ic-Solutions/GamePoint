@@ -2056,36 +2056,16 @@ h3 {
 
 .rules {
   font-size: 1.2rem;
+  background-image: url('/img/rules/rule-bg.png'), linear-gradient(0deg, #ffffffd7,#ffffffd7);
+  background-blend-mode: lighten;
+  background-repeat:repeat-y;
+  background-position: top right;
 }
 
 .rules ul li, .rules .ordered-list-alpha li{
   list-style: disc;
   font-size: smaller;
   margin-left: 3rem;
-}
-
-.rules .shape-3 img{
-  position: absolute;
-  height: 150vh;
-  top: 0;
-  left: -75vh;
-  opacity: 0.3;
-  z-index: -1;
-}
-
-.rules .shape-1 {
-  position: absolute;
-  top: -150px;
-  right: -200px;
-  opacity: 0.2;
-  z-index:-1;
-}
-
-.rules .shape-2 {
-  position: absolute;
-  bottom: 15%;
-  right: 10%;
-  opacity: 0.2;
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -2097,7 +2077,6 @@ h3 {
 
 .contact .col-4 p:hover{
   color: black;
-
 }
 
 .contact .chairs img{
