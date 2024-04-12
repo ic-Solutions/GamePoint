@@ -32,7 +32,7 @@ var TxtRotate = function(el, toRotate, period) {
 	} else if (this.isDeleting && this.txt === '') {
 	  this.isDeleting = false;
 	  this.loopNum++;
-	  delta = 1000;
+	  delta = 500;
 	}
   
 	setTimeout(function() {
@@ -44,7 +44,7 @@ var TxtRotate = function(el, toRotate, period) {
 	var elements = document.getElementsByClassName('txt-rotate');
 	for (var i=0; i<elements.length; i++) {
 	  var toRotate = elements[i].getAttribute('data-rotate');
-	  var period = 1000 //elements[i].getAttribute('data-period');
+	  var period = 500; //elements[i].getAttribute('data-period');
 	  if (toRotate) {
 		new TxtRotate(elements[i], JSON.parse(toRotate), period);
 	  }

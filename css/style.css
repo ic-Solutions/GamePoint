@@ -2008,6 +2008,7 @@ h3 {
   font-size: xx-large;
 }
 
+
 .categories .row .card{
   padding: 30px 20px;
   text-align: center;
@@ -2051,9 +2052,10 @@ h3 {
 }
 
 .categories .row .card .price .original-price{
-  color: black;
+  color: #000000b0;
   font-size: 15px;
-  text-decoration: line-through red;
+  line-height: 1.5rem;
+  padding-bottom: 10px;
 }
 
 .categories .row .card a{
