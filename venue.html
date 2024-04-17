@@ -15,16 +15,209 @@
 
     <!-- CSS here -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/nice-select.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <!-- <link rel="stylesheet" href="css/owl.carousel.min.css"> -->
+    <!-- <link rel="stylesheet" href="css/magnific-popup.css"> -->
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" href="css/themify-icons.css"> -->
+    <!-- <link rel="stylesheet" href="css/nice-select.css"> -->
+    <!-- <link rel="stylesheet" href="css/flaticon.css"> -->
+    <!-- <link rel="stylesheet" href="css/animate.css"> -->
     <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+    <style>
+        .angry-grid {
+            display: grid;
+
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+            gap: 10px;
+            height: 100%;
+            width: 200%;
+            padding: 5px;
+
+            animation: scrollx infinite linear 20s;
+        }
+
+        @keyframes scrollx {
+            0% {
+                transform: translateX(0);
+            }
+
+            40% {
+                transform: translateX(-40%);
+            }
+
+            100% {
+                transform: translateX(-0%);
+            }
+        }
+
+        .angry-grid div img {
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+            transition-duration: 0.4s;
+        }
+
+        .angry-grid div img:hover {
+            box-shadow: 0 0 5px black;
+        }
+
+        #item-0 {
+
+            background-color: #DB69DA;
+            grid-row-start: 1;
+            grid-column-start: 1;
+
+            grid-row-end: 2;
+            grid-column-end: 3;
+
+        }
+
+        #item-1 {
+
+            background-color: #9BD7BC;
+            grid-row-start: 1;
+            grid-column-start: 3;
+
+            grid-row-end: 3;
+            grid-column-end: 4;
+
+        }
+
+        #item-2 {
+
+            background-color: #BC78BA;
+            grid-row-start: 1;
+            grid-column-start: 4;
+
+            grid-row-end: 2;
+            grid-column-end: 6;
+
+        }
+
+        #item-3 {
+
+            background-color: #855B75;
+            grid-row-start: 2;
+            grid-column-start: 1;
+
+            grid-row-end: 3;
+            grid-column-end: 3;
+
+        }
+
+        #item-4 {
+
+            background-color: #BBA5E9;
+            grid-row-start: 2;
+            grid-column-start: 4;
+
+            grid-row-end: 3;
+            grid-column-end: 6;
+
+        }
+
+        #item-5 {
+
+            background-color: #A77777;
+            grid-row-start: 1;
+            grid-column-start: 6;
+
+            grid-row-end: 2;
+            grid-column-end: 8;
+
+        }
+
+        #item-6 {
+
+            background-color: #5BFD9B;
+            grid-row-start: 2;
+            grid-column-start: 6;
+
+            grid-row-end: 3;
+            grid-column-end: 8;
+
+        }
+
+        #item-7 {
+
+            background-color: #BCA558;
+            grid-row-start: 1;
+            grid-column-start: 8;
+
+            grid-row-end: 2;
+            grid-column-end: 10;
+
+        }
+
+        #item-8 {
+
+            background-color: #D77998;
+            grid-row-start: 2;
+            grid-column-start: 8;
+
+            grid-row-end: 3;
+            grid-column-end: 10;
+
+        }
+
+        .my-modal {
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        .my-modal .modal-close-btn {
+            position: absolute;
+            top: 5vh;
+            right: 10vw;
+            color: white;
+            font-size: 4em;
+            cursor: pointer;
+            z-index: 1002;
+        }
+
+        .my-modal img {
+            padding: 10px;
+            background-color: white;
+            position: relative;
+            max-height: 80vh;
+            z-index: 1001;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @media (max-width: 700px) {
+            .angry-grid {
+                width: 400%;
+            }
+
+            .my-modal .modal-close-btn {
+                top: 25vh;
+                right: 10px;
+                font-size: 2em;
+            }
+
+            .my-modal img {
+                max-width: 90vw;
+            }
+        }
+
+        .maparea{
+            background-image: url('/img/venue/business_logo.webp'), linear-gradient(0deg, #ffffff90, #ffffff90);
+            background-blend-mode: lighten;
+            background-position: right top;
+        }
+    </style>
 </head>
 
 <body>
@@ -46,10 +239,10 @@
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a class="active" href="/">Home</a></li>
+                                        <li><a href="/">Home</a></li>
                                         <li><a href="rules.html">Tournament Rules</a></li>
-                                        <li><a href="venue.html">Venue</a></li>
-                                        <li><a href="history.html">History</a></li>
+                                        <li><a class="active" href="venue.html">Venue</a></li>
+                                        <!-- <li><a href="history.html">History</a></li> -->
                                         <li><a href="contact.html">Contact Us</a></li>
                                         <li><a class="d-lg-none" href="register"><b>REGISTER!</b></a></li>
                                     </ul>
@@ -118,7 +311,191 @@
     </div>
     <!-- slider_area_end -->
 
-    <h1>Venue</h1>
+    <!-- Map_area_start -->
+    <section class="venue-section" style="overflow:hidden;">
+        <div class="container mt-5">
+            <div class="serction_title_large mb-60">
+                <h3>Feather Touch</h3>
+            </div>
+        </div>
+        <div class="container mx-0">
+            <div>
+                <div>
+                    <div class="angry-grid">
+                        <div id="item-0"><img src="/img/venue/1.webp" onclick="showmodal(event)"></div>
+                        <div id="item-1"><img src="/img/venue/3.webp" onclick="showmodal(event)"></div>
+                        <div id="item-2"><img src="/img/venue/2.webp" onclick="showmodal(event)"></div>
+                        <div id="item-3"><img src="/img/venue/4.webp" onclick="showmodal(event)"></div>
+                        <div id="item-4"><img src="/img/venue/5.webp" onclick="showmodal(event)"></div>
+                        <div id="item-5"><img src="/img/venue/6.webp" onclick="showmodal(event)"></div>
+                        <div id="item-6"><img src="/img/venue/7.webp" onclick="showmodal(event)"></div>
+                        <div id="item-7"><img src="/img/venue/8.webp" onclick="showmodal(event)"></div>
+                        <div id="item-8"><img src="/img/venue/9.webp" onclick="showmodal(event)"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mb-5 pb-5 maparea">
+            <div class="serction_title_large mb-30 py-3">
+                <h3>Directions</h3>
+            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2312.5189403846193!2d77.58394325432722!3d12.896287694349043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae153f836d9c85%3A0xabf70fe7ddd3db40!2sFeather%20Touch%20Sports%20Arena!5e0!3m2!1sen!2sin!4v1713351857000!5m2!1sen!2sin"
+                style="width: 100%; height: 70vh; border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    <!-- Map_area_end -->
+
+    <!-- resister_book_start -->
+    <div class="resister_book resister_bg_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="resister_text text-center">
+                        <h3>Register Now<br>
+                            And get your kits ready</h3>
+                        <h4>Cause the match is on and its <b>Game-Point</b>!</h4>
+                        <a href="register" class="boxed-btn-white">Sign me up!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- resister_book_end -->
+
+    <!-- brand_area_start -->
+    <!-- <div class="brand_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="serction_title_large mb-60 mb-95" style="text-align:center">
+                            <h3>Our Sponsors</h3>
+                        </div>
+                        <div class="brand_active owl-carousel">
+                            <div class="single_brand text-center">
+                                <img src="img/barnd/1.png" alt="">
+                            </div>
+                            <div class="single_brand text-center">
+                                <img src="img/barnd/2.png" alt="">
+                            </div>
+                            <div class="single_brand text-center">
+                                <img src="img/barnd/3.png" alt="">
+                            </div>
+                            <div class="single_brand text-center">
+                                <img src="img/barnd/4.png" alt="">
+                            </div>
+                            <div class="single_brand text-center">
+                                <img src="img/barnd/5.png" alt="">
+                            </div>
+                            <div class="single_brand text-center">
+                                <img src="img/barnd/6.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    <!-- brand_area_end -->
+
+    <!-- faq_area_Start -->
+    <div class="faq_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="serction_title_large mb-60">
+                        <h3>
+                            Frequently Asked
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div id="accordion">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                        aria-expanded="true" aria-controls="collapseOne">
+                                        <img src="img/barnd/info.png" alt="">What are the playing rules of the
+                                        tournament?</span>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    The tournament will follow the official BWF rules. The exact rules can also be found
+                                    at the <a href="/rules.html"
+                                        style="text-decoration: underline; color:cornflowerblue;">Rules Page</a>.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+
+                                        <img src="img/barnd/info.png" alt=""> If due to reasons, I am unable to
+                                        participate, can I avail a refund?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    Due to the scale of the event and the amount of logistics involved, we will <b>not
+                                        be able to process refunds</b> for any reasons. All the tournament information
+                                    is already available on the website and we request you to refer the same.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        <img src="img/barnd/info.png" alt=""> Can I participate in multiple
+                                        categories if I'm eligible?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    Yes, you can. But do know that all the categories will be in play simultaneously.
+                                    This means there is a chance your game slots might collide. Rest assured, the team
+                                    will try its best to work out a solution, if possible.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingFour">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        <img src="img/barnd/info.png" alt=""> Can I register at the venue on the day of
+                                        the event?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    Yes, registrations are open till 9 AM on the day of the event at a higher price slab
+                                    of ₹399 for single categories and ₹649 for team categories.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- faq_area_end -->
 
     <!-- footer_start -->
     <footer class="footer footer_bg_1">
@@ -162,7 +539,7 @@
                             </h3>
                             <ul>
                                 <li><a href="rules.html">Rules</a></li>
-                                <li><a href="history.html">History</a></li>
+                                <!-- <li><a href="history.html">History</a></li> -->
                                 <li><a href="contact.html">Contact</a></li>
                                 <li><a href="register">Register</a></li>
                                 <li><a href="about.html">Privacy Policy</a></li>
@@ -202,37 +579,51 @@
     <!-- footer_end -->
 
 
-
-
-
-
     <!-- JS here -->
+    <script>
+        function showmodal(e) {
+            var modal = document.createElement("div");
+            modal.classList.add("my-modal");
+
+            var modal_child = document.createElement("img");
+            modal_child.setAttribute("src", e.target.src);
+
+            var close_btn = document.createElement("span");
+            close_btn.innerHTML = "X";
+            close_btn.classList.add("modal-close-btn");
+
+            modal.appendChild(close_btn);
+            modal.appendChild(modal_child);
+            document.body.appendChild(modal);
+
+            modal.addEventListener('click', (event) => {
+                let close = event.target;
+                if (close.nodeName === "DIV")
+                    close.parentElement.removeChild(close);
+                else if (close.nodeName === "SPAN")
+                    close.parentElement.parentElement.removeChild(close.parentElement);
+            })
+        }
+    </script>
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="js/popper.min.js"></script>
+    <script src="js/textRotate.js"></script>
+    <!-- <script src="js/popper.min.js"></script> -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/ajax-form.js"></script>
-    <script src="js/waypoints.min.js"></script>
+    <!-- <script src="js/owl.carousel.min.js"></script> -->
+    <!-- <script src="js/isotope.pkgd.min.js"></script> -->
+    <!-- <script src="js/ajax-form.js"></script> -->
+    <!-- <script src="js/waypoints.min.js"></script> -->
     <script src="js/jquery.counterup.min.js"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/scrollIt.js"></script>
+    <!-- <script src="js/imagesloaded.pkgd.min.js"></script> -->
+    <!-- <script src="js/scrollIt.js"></script> -->
     <script src="js/jquery.scrollUp.min.js"></script>
     <script src="js/wow.min.js"></script>
-    <script src="js/nice-select.min.js"></script>
+    <!-- <script src="js/nice-select.min.js"></script> -->
     <script src="js/jquery.slicknav.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- <script src="js/jquery.magnific-popup.min.js"></script> -->
     <script src="js/jquery.countdown.js"></script>
     <script src="js/plugins.js"></script>
-    <script src="js/textRotate.js"></script>
-
-    <!--contact js-->
-    <script src="js/contact.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/jquery.form.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/mail-script.js"></script>
 
     <script src="js/main.js"></script>
 
