@@ -1407,6 +1407,19 @@ h3 {
   text-align: center;
 }
 
+.tourney{
+  background-image: url('/img/banner/tourney-bg.webp'), linear-gradient(0deg, #000000d0, #000000d0);
+  background-blend-mode: multiply;
+  background-size: cover;
+  padding: 70px 0;
+}
+
+.tourney h1{
+  color: whitesmoke;
+  background-color: #252830;
+  margin: 0px;
+}
+
 .dream_service {
   padding-top: 100px;
   padding-bottom: 100px;

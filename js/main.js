@@ -91,7 +91,7 @@ autoplaySpeed: 800,
   }
 });
 
-// count_dwon
+// count_down
 $('#clock').countdown('2024/04/28 09:00:00', function(event) {
   $(this).html(event.strftime('<div class="countdown_time"><div class="single_countdown"><h3>%D</h3><span>days</span></div><div class="single_countdown"><h3>%H</h3><span>Hours</span></div><div class="single_countdown"><h3>%M</h3><span>Minutes</span></div><div class="single_countdown"><h3>%S</h3><span>Seconds</span></div></div>'));
 });
@@ -99,34 +99,6 @@ $('#clock').countdown('2024/04/28 09:00:00', function(event) {
   
   // wow js
   new WOW().init();
-
-  // counter 
-  $('.counter').counterUp({
-    delay: 10,
-    time: 10000
-  });
-
-/* magnificPopup img view */
-$('.popup-image').magnificPopup({
-	type: 'image',
-	gallery: {
-	  enabled: true
-	}
-});
-
-/* magnificPopup img view */
-$('.img-pop-up').magnificPopup({
-	type: 'image',
-	gallery: {
-	  enabled: true
-	}
-});
-
-/* magnificPopup video view */
-$('.popup-video').magnificPopup({
-	type: 'iframe'
-});
-
 
   // scrollIt for smoth scroll
   $.scrollIt({
@@ -152,6 +124,12 @@ $('.popup-video').magnificPopup({
   });
 
 
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    items: 1,
+})
   // blog-page
 
   //brand-active
@@ -175,77 +153,6 @@ autoplaySpeed: 800,
       },
       992:{
           items:7
-      }
-  }
-});
-
-// blog-dtails-page
-
-  //project-active
-$('.project-active').owlCarousel({
-  loop:true,
-  margin:30,
-items:1,
-// autoplay:true,
-navText:['<i class="Flaticon flaticon-left-arrow"></i>','<i class="Flaticon flaticon-right-arrow"></i>'],
-nav:true,
-dots:false,
-// autoplayHoverPause: true,
-// autoplaySpeed: 800,
-  responsive:{
-      0:{
-          items:1,
-          nav:false
-
-      },
-      767:{
-          items:1,
-          nav:false
-      },
-      992:{
-          items:2,
-          nav:false
-      },
-      1200:{
-          items:1,
-      },
-      1501:{
-          items:2,
-      }
-  }
-});
-
-if (document.getElementById('default-select')) {
-  $('select').niceSelect();
-}
-
-  //about-pro-active
-$('.details_active').owlCarousel({
-  loop:true,
-  margin:0,
-items:1,
-// autoplay:true,
-navText:['<i class="ti-angle-left"></i>','<i class="ti-angle-right"></i>'],
-nav:true,
-dots:false,
-// autoplayHoverPause: true,
-// autoplaySpeed: 800,
-  responsive:{
-      0:{
-          items:1,
-          nav:false
-
-      },
-      767:{
-          items:1,
-          nav:false
-      },
-      992:{
-          items:1,
-          nav:false
-      },
-      1200:{
-          items:1,
       }
   }
 });
