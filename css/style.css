@@ -20,6 +20,16 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#694EA0', endColorstr='#40C9FF',GradientType=1 );
 }
 
+.donate-block{
+  font-size: 30px;
+}
+
+@media (max-width: 400px){
+  .donate-block{
+    font-size: 18px;
+  }
+}
+
 /* Normal desktop :1200px. */
 /* Normal desktop :992px. */
 /* Tablet desktop :768px. */
