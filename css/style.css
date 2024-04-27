@@ -2085,8 +2085,10 @@ h3 {
   border-radius: 5px;
   padding: 10px;
   background: linear-gradient(135deg,#40C9FF,#694EA0);
-  color: white;
+  filter:grayscale(1);
+  color: darkgray;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .rules {
